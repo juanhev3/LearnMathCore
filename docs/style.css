@@ -1,0 +1,40 @@
+textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 1.2em;
+  padding: 10px;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button, .symbol-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #004e92;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .symbol-btn:hover {
+  background-color: #0066cc;
+}
+
+.output {
+  background: #fff;
+  padding: 15px;
+  border-left: 4px solid #004e92;
+  margin-top: 1em;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+.math-output {
+  font-size: 1.5em;
+  margin-top: 1em;
+  color: #004e92;
+}

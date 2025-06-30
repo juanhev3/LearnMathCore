@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Math Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    #inputArea, #outputArea {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2em;
+    }
+    .symbol-btn {
+      font-size: 1em;
+      margin: 4px;
+      padding: 10px;
+      min-width: 50px;
+    }
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Your Math Journey</h1>
+  <h2>Try the AI Math Calculator</h2>
+
+  <textarea id="inputArea" rows="3" placeholder="Type a math expression like integrate(x**2, x) or diff(x**2, x)"></textarea>
+  <br>
+
+  <!-- Symbolic Math Buttons -->
+  <button class="symbol-btn" data-insert="integrate(">∫</button>
+  <button class="symbol-btn" data-insert="diff(">d/dx</button>
+  <button class="symbol-btn" data-insert="sqrt(">√</button>
+  <button class="symbol-btn" data-insert="log(">log</button>
+  <button class="symbol-btn" data-insert="exp(">eˣ</button>
+  <button class="symbol-btn" data-insert="sin(">sin</button>
+  <button class="symbol-btn" data-insert="cos(">cos</button>
+  <button class="symbol-btn" data-insert="tan(">tan</button>
+  <button class="symbol-btn" data-insert=")">)</button>
+  <button class="symbol-btn" data-insert="^">^</button>
+  <button class="symbol-btn" data-insert="sum(">∑</button>
+
+  <br><br>
+  <button onclick="evaluateExpression()">Calculate</button>
+
+  <div id="output"></div>
+
+  <footer>
+    <p>This platform is powered by AI to guide you from foundational concepts to advanced mathematics using interactive tools, visual explanations, and symbolic math input.</p>
+  </footer>
+
+  <!-- MathJax for LaTeX Rendering -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Link your calculator script -->
+  <script src="scripts/ai_calculator.js"></script>
+</body>
+</html>

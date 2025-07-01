@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const expression = inputArea.value;
 
     try {
-      const response = await fetch("http://learnmathcore-backend.onrender.com/calculate", {
+      const response = await fetch("https://learnmathcore-backend.onrender.com/calculate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

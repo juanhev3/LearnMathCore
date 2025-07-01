@@ -4,7 +4,7 @@ from sympy import Symbol, sympify, integrate, diff, simplify, latex
 from sympy.parsing.sympy_parser import parse_expr
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://juanhev3.github.io"])
 
 @app.route("/calculate", methods=["POST"])
 def calculate():

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { 
   const inputArea = document.getElementById("inputArea");
   const outputDiv = document.getElementById("output");
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const expression = inputArea.value;
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/calculate", {
+      const response = await fetch("https://learnmathcore-backend.onrender.com/calculate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       outputDiv.innerHTML = `<p>${data.input} ${data.output}</p>`;
       MathJax.typesetPromise();
     } catch (error) {
-      outputDiv.innerHTML = `<p style="color:red;">Error: Failed to fetch</p>`;
+      outputDiv.innerHTML = `<p style="color:red;">Error: Failed to connect to backend</p>`;
     }
   };
 });
